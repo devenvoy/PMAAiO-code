@@ -21,10 +21,8 @@ $characters = array(
 			);
 
 foreach ($characters as $c) {
-        while (list($k, $v) = each ($c)) {
-                echo "$k ... $v <br/>";
-        }
-        echo "<hr/>";
+	foreach ($c as $k => $v) {
+		echo "$k ... $v <br/>";
+	}
+	echo "<hr/>";
 }
-
-?>
