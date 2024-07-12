@@ -1,0 +1,3 @@
+<?php 
+define("newline","<br/>")
+?>
