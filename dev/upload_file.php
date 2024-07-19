@@ -4,7 +4,7 @@ if (isset($_POST["submit"])) {
     // name is file property
     if (!empty($_FILES['upload']['name'])) {
         print_r($_FILES);
-    }else{
+    } else {
         $message = "<p style=\"color:red;\">please choose a file </p>";
     }
 }
@@ -24,13 +24,13 @@ if (isset($_POST["submit"])) {
 
 <?php echo $message ?? null; ?>
 
-    <!-- enctype="multipart/form-data" with out this file upload not going to work  -->
-    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" enctype="multipart/form-data">
+<!-- enctype="multipart/form-data" without this file upload not going to work  -->
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 
-        <p> Select Image to upload </p>
-        <input type="file" name="upload">
-        <input type="submit" value="submit" name="submit">
-    </form>
+    <p> Select Image to upload </p>
+    <input type="file" name="upload">
+    <input type="submit" value="submit" name="submit">
+</form>
 </body>
 
 </html>

@@ -16,7 +16,7 @@ echo "is int :" . is_int($numVar) . newline;
 $doubleVar = 3.14;
 echo "is double :" . is_double($doubleVar) . newline;
 
-$floatvar = (float) 3.99;
+$floatVar = (float) 3.99;
 echo "is float :" . is_float($floatVar) . newline;
 
 $stringVar = "Devansh";
@@ -47,4 +47,5 @@ print ("also you can print like this");
 echo newline . newline;
 print ("print_r() are used to print array");
 echo newline;
-print_r([1, 2, 3, 45, 5]); 
+print_r([1, 2, 3, 45, 5]);
+
