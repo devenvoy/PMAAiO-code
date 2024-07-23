@@ -21,7 +21,6 @@ class User{
 
     // can not have overloaded constructor in php
     // public function __construct(){
-       
     // }
 
 

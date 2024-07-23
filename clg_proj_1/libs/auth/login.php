@@ -145,7 +145,7 @@ if(isset($_POST['submit'])){
             session_start();
             $_SESSION["user"] = $user;
             
-            header("Location: /phpcodes/clg_proj_1/libs/inc/");
+            header("Location: /phpcodes/clg_proj_1/libs/inc/home.php");
 
         }else{
             echo "<script>alert('incorrect email and password')</script>";

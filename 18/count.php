@@ -18,4 +18,3 @@ if (mysqli_connect_errno()) {
 	mysqli_free_result($res);
 	mysqli_close($mysqli);
 }
-?>
