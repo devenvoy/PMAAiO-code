@@ -1,5 +1,7 @@
 <?php 
 
+namespace Clg_proj_1\Config;
+
 define("DB_HOST","localhost");
 define("DB_USER","dev");
 define("DB_PASS","136974");

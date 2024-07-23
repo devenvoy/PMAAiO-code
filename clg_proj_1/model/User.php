@@ -1,5 +1,5 @@
 <?php
-
+namespace Clg_proj_1\Model;
 class User {
     public int $id;
     public string $first_name;
