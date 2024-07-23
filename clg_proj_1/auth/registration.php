@@ -104,9 +104,10 @@
 </head>
 <body>
 
-    <h1>Register User here</h1>
+    <h1>Register User here </h1>
     <div>
-        <form method="post">
+        <form action="<?php echo htmlspecialchars(
+        $_SERVER['PHP_SELF']);?>" , method="post">
             <label>
                 First Name
                 <input type="text" name="first_name" required>
@@ -138,8 +139,6 @@
     </div>
 </div>
     
-</body>
-</html>
 
 <?php
 
@@ -156,4 +155,20 @@ if (isset($_POST['submit'])) {
         first_created: date('Y-m-d H:i:s'),
         last_updated: date('Y-m-d H:i:s')
     );
+
+    var_dump($user);
+
+    $query = mysqli_query($connection,"
+    insert into user values({$user->id},'{$user->first_name}','{$user->last_name}',{$user->age},'{$user->address}','{$user->email}','{$user->password}',{$user->first_created},{$user->last_updated})");
+
+    if($query){
+        header("Location: /phpcodes/clg_proj_1/dashboard/home.php");
+    }
+    else{
+        echo "". mysqli_error($connection);
+        echo "<h1>something went wrong</h1>";
+    }
 }
+?>
+</body>
+</html>

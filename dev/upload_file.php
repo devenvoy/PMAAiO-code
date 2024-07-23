@@ -10,7 +10,7 @@ if (isset($_POST["submit"])) {
         $file_name = $_FILES['upload']['name'];
         $file_size = $_FILES['upload']['size'];
         $file_temp = $_FILES['upload']['tmp_name'];
-        $target_dir = "uploads/${file_name}";
+        $target_dir = "uploads/$file_name";
 
         $file_ext = explode(".", $file_name);
         $file_ext = strtolower(end($file_ext));
